@@ -80,11 +80,11 @@ set   class_ID =2
 where student_name = 'Hung'; 
 select * from student;
 
-select student.student_name, `subject`.subject_name, mark.mark
+select student.student_name, `subject`.sub_name, mark.mark
 from student 
-join mark on student.student_id = mark.student_id
-join `subject` on mark.subject_id = `subject`.subject_id
-group by mark.mark_id
+join mark on student.student_ID = mark.student_ID
+join `subject` on mark.sub_ID = `subject`.sub_ID
+group by mark.mark_ID
 order by mark desc, student_name;
 
 
