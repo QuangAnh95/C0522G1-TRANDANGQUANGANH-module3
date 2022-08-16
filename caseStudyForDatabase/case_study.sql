@@ -29,6 +29,7 @@ dia_chi varchar(45),
 ma_vi_tri int,
 ma_trinh_do int,
 ma_bo_phan int,
+is_delete bit default 0,
 foreign key(ma_vi_tri) references vi_tri(ma_vi_tri),
 foreign key(ma_trinh_do) references trinh_do(ma_trinh_do),
 foreign key(ma_bo_phan) references bo_phan(ma_bo_phan)
@@ -49,7 +50,8 @@ gioi_tinh bit(1),
 so_cmnd varchar(45),
 so_dien_thoai varchar(45),
 email varchar(45),
-dia_chi varchar(45)
+dia_chi varchar(45),
+is_delete bit default 0
 );
 
 create table kieu_thue(
