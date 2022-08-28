@@ -1,10 +1,10 @@
-package service;
+package repository;
 
 import model.Product;
 
 import java.util.List;
 
-public interface IProductService {
+public interface IProductRepository {
     List<Product> findAll();
 
     void save(Product customer);
@@ -13,7 +13,7 @@ public interface IProductService {
 
     Product findById(int id);
 
-    void update(int id, Product customer);
+    void update(int id, Product product);
 
     void remove(int id);
 }
