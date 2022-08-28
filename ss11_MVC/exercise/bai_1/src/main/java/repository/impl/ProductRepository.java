@@ -1,6 +1,5 @@
 package repository.impl;
 
-import javafx.beans.binding.MapExpression;
 import model.Product;
 import repository.IProductRepository;
 
@@ -10,11 +9,10 @@ public class ProductRepository implements IProductRepository {
     private static Map<Integer, Product> productList = new HashMap<>();
 
     static {
-        productList.put(1, new Product(1, "Bánh Chocopice", 24000, "Hạn dùng 6 tháng", "Vina Food"));
-        productList.put(2, new Product(2, "Kẹo bạc hà hạt nhân", 23000, "Hạn dùng 6 tháng", "Vina Food"));
-        productList.put(3, new Product(3, "Kẹo ổi", 5000, "Hạn dùng 12 tháng", "Vina Food"));
-        productList.put(4, new Product(4, "Bánh tráng dừa", 30000, "Hạn dùng 6 tháng", "Vina Food"));
-        productList.put(5, new Product(5, "Bánh Nabutri", 12000, "Hạn dùng 12 tháng", "Vina Food"));
+        productList.put(1, new Product(1, "colgate", 15000, "kem đánh răng", "PALMOLIVE"));
+        productList.put(2, new Product(2, "P/s", 23000, "kem đánh răng", "unilevel"));
+        productList.put(3, new Product(3, "lifebuoy", 5000, "xà phòng", "unilevel"));
+        productList.put(4, new Product(4, "OMO", 30000, "bột giặt", "unilevel"));
     }
 
     @Override
@@ -23,7 +21,7 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public void save(Product customer) {
+    public void save(Product product) {
         productList.put(product.getId(), product);
     }
 
@@ -52,6 +50,7 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void update(int id, Product product) {
+
         productList.put(product.getId(), product);
     }
 
@@ -60,4 +59,3 @@ public class ProductRepository implements IProductRepository {
         productList.remove(id);
     }
 }
-

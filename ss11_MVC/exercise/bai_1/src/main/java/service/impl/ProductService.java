@@ -11,14 +11,13 @@ import java.util.List;
 public class ProductService implements IProductService {
     private IProductRepository productRepository = new ProductRepository();
 
-
     @Override
     public List<Product> findAll() {
         return new ArrayList<>(productRepository.findAll());
     }
 
     @Override
-    public void save(Product customer) {
+    public void save(Product product) {
         productRepository.save(product);
     }
 
@@ -33,7 +32,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void update(int id, Product customer) {
+    public void update(int id, Product product) {
         productRepository.update(id, product);
     }
 
