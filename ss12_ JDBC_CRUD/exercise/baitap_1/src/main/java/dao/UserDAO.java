@@ -2,7 +2,9 @@ package dao;
 
 import model.User;
 
+import java.math.BigDecimal;
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,8 @@ public class UserDAO  implements  IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+    private static final String SQL_TABLE_DROP = "";
+    private static final String SQL_TABLE_CREATE ="";
 
     public UserDAO() {
     }
@@ -165,6 +169,89 @@ public class UserDAO  implements  IUserDAO {
         }
     }
 
+
+
+    @Override
+    public void insertUpdateUseTransaction() {
+        try (Connection conn = getConnection();
+
+             Statement statement = conn.createStatement();
+
+             PreparedStatement psInsert = conn.prepareStatement(INSERT_USERS_SQL);
+
+             PreparedStatement psUpdate = conn.prepareStatement(UPDATE_USERS_SQL)) {
+
+            statement.execute(SQL_TABLE_DROP);
+
+            statement.execute(SQL_TABLE_CREATE);
+
+            // start transaction block
+
+            conn.setAutoCommit(false); // default true
+
+            // Run list of insert commands
+
+            psInsert.setString(1, "Quynh");
+
+            psInsert.setBigDecimal(2, new BigDecimal(10));
+
+            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
+
+            psInsert.execute();
+
+
+
+            psInsert.setString(1, "Ngan");
+
+            psInsert.setBigDecimal(2, new BigDecimal(20));
+
+            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
+
+            psInsert.execute();
+
+
+
+            // Run list of update commands
+
+
+
+            // below line caused error, test transaction
+
+            // org.postgresql.util.PSQLException: No value specified for parameter 1.
+
+            psUpdate.setBigDecimal(1, new BigDecimal(999.99));
+
+
+
+            //psUpdate.setBigDecimal(1, new BigDecimal(999.99));
+
+            psUpdate.setString(2, "Quynh");
+
+            psUpdate.execute();
+
+
+
+            // end transaction block, commit changes
+
+            conn.commit();
+
+
+            conn.setAutoCommit(true);
+
+
+
+        } catch (Exception e) {
+
+            System.out.println(e.getMessage());
+
+            e.printStackTrace();
+
+        }
+
+    }
+
+
+
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {
             if (e instanceof SQLException) {
@@ -179,5 +266,8 @@ public class UserDAO  implements  IUserDAO {
                 }
             }
         }
+    }
+
+    private class SQL_TABLE_DROP {
     }
 }
