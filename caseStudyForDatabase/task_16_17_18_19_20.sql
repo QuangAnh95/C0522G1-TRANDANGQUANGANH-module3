@@ -42,13 +42,19 @@ from khach_hang
 where is_delete = 1;
 
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+update dich_vu_di_kem set gia=gia*2 where ma_dich_vu_di_kem in(
+select *
+from (
+select dvdk.ma_dich_vu_di_kem
+from dich_vu_di_kem dvdk
+join hop_dong hd on dvdk.ma_hop_dong = hd.ma_hop_dong
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma-dich_vu_di_kem
+where year(hd.ngay_lam_hop_dong) = 2020
+group by ma_dich_vu_di_kem
+having sum(hdct.so_luong) >= 10) as temp) ;
 
-select  count(hdct.ma_dich_vu_di_kem) as sl
-from hop_dong_chi_tiet hdct
-join hop_dong hd on hdct.ma_hop_dong = hd.ma_hop_dong
-join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
-group by dvdk.ma_dich_vu_di_kem
-having sl >= 10 ;
+select *
+from dich_vu_di_Kem;
 
 
 
@@ -56,8 +62,8 @@ having sl >= 10 ;
  -- thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
  
 select ma_nhan_vien, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
-from nhan_vien ;
-
+from nhan_vien 
+union all
 select ma_khach_hang , ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 from khach_hang;
  
