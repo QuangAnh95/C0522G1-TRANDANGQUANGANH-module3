@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac042feb-4518-45cb-9cc2-c4fd90d548d9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/controller/caseServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/model/customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/model/customerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/model/educationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/model/employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/model/position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../caseStudy_for_MVC/MVC/src/main/java/repository/impl/CustomerRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="2E5GZwrQ7GR4Ts3i9lk0Wsq7hSW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac042feb-4518-45cb-9cc2-c4fd90d548d9" name="Changes" comment="" />
+      <created>1661878090876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661878090876</updated>
+      <workItem from="1661878092169" duration="31000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
