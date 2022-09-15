@@ -42,8 +42,8 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
              aria-expanded="false">Employee</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Employee list</a></li>
-            <li><a class="dropdown-item" href="#">Add new Employee</a></li>
+            <li><a class="dropdown-item" href="/employee">Employee list</a></li>
+            <li><a class="dropdown-item" href="/employee?action=create">Add new Employee</a></li>
           </ul>
         </li>
 

@@ -86,7 +86,7 @@ foreign key(customer_id) references customer(customer_id),
 foreign key(facility_id) references facility(facility_id)
 );
 create table attach_facility(
-attach_facility_id int primary key auto_increment,
+attach_facility_id int primary key auto_incrementho_khau,
 attach_facility_name varchar(45) not null,
 attach_facility_cost double not null,
 attach_facility_unit  varchar(45) not null,
@@ -202,3 +202,17 @@ values
 (1,1,3),
 (2,1,2),
 (2,12,2);
+
+delimiter //
+create procedure employee_delete(in p_id int)
+begin
+update employee
+ set is_delete = 1
+ where employee_id = p_id;
+end//
+delimiter ;
+
+use database_casestudy;
+select * from employee;
+
+call employee_delete(1);
