@@ -9,12 +9,10 @@ select max(Credit)
 from Subject);
 
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
-select SubName, Mark 
+select SubName, max(m.Mark ) as max_m
 from Mark m
-join Subject s on m.SubId = s.SubId
-where m.Mark = (
-select max(Mark)
-from Mark );
+join Subject s on m.SubId = s.SubId;
+
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 
