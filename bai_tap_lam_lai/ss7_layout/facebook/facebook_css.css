@@ -1,0 +1,81 @@
+
+
+.cow{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main{
+    background-color: blue;
+    height: 90px;
+}
+#head b, #head i{
+    color: white;
+    font-size: 45px;
+   margin: 20px;
+}
+.input{
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 80%;
+    height: 60px;
+    margin-top: 15px;
+
+}
+.main i{
+   margin-right: 0px;
+}
+#contain i{
+    height: 60px;
+    color: blue;
+    font-size: 30px;
+    margin-top: 15px;
+}
+#contain img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+#scroll{
+    width: 30%;
+    height: 800px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+.left{
+    background: white;
+    height: 800px;
+    overflow: hidden;
+}
+.left:hover{
+    overflow: scroll;}
+
+
+.center img{
+    border-radius: 20px;
+}
+.center{
+    padding-top: 10px;
+
+}
+.felling i, .felling span{
+    padding: 10px;
+    font-size: 25px;
+}
+.center{
+    background: white;
+    height: 800px;
+    overflow: hidden;
+}
+.center:hover{
+    overflow: scroll;}
+
+
+.right{
+    background: white;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+.right:hover{
+    overflow: scroll;}
