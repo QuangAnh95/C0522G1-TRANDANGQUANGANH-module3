@@ -39,7 +39,7 @@
 <table class="table table-striped">
     <tr>
         <%--        <th>Mã sản phẩm</th>--%>
-        <th>Name</th>
+        <th>Tên</th>
         <th>Price</th>
         <th>Description</th>
         <th>Producer</th>
