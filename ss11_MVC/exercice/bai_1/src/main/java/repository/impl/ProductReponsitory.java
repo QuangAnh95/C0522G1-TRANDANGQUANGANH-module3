@@ -32,11 +32,6 @@ public class ProductReponsitory implements IProductReponsitory {
     }
 
     @Override
-    public String view(int id) {
-        return null;
-    }
-
-    @Override
     public void update(int id, Product product) {
         productList.put(id,product);
     }

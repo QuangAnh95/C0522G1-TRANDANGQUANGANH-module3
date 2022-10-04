@@ -13,6 +13,5 @@ public interface IProductReponsitory {
 
     void save(Product product);
     void delete(int id);
-    String view(int id);
     void update(int id, Product product);
 }
