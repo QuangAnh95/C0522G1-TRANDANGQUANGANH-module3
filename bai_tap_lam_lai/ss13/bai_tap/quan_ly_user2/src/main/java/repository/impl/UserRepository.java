@@ -12,9 +12,10 @@ public class UserRepository implements IUserRepository {
     private static final String SELECT = "select * from users;";
     private static final String SAVE = "insert into users(`name`,email,country)\n" +
             "values (?,?,?)";
-    private  static final String SELECT2 = "call userlist()";
-    private static final String UPDATE_USERS_SQL2 = "call edit_list(?,?,?,?);";
+    private  static final String SELECT_2 = "call userlist()";
+    private static final String UPDATE_USERS_SQL_2 = "call edit_list(?,?,?,?);";
     private static final String DELETE = "delete from users where id = ?";
+    private static final String DELETE_2 = "call edit_list()";
     private static final String FIND = "select * from users where id = ?";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     @Override
@@ -25,7 +26,7 @@ public class UserRepository implements IUserRepository {
             User user;
 //           PreparedStatement preparedStatement = connection.prepareStatement(SELECT);
 //            ResultSet resultSet = preparedStatement.executeQuery();
-            CallableStatement callableStatement = connection.prepareCall(SELECT2);
+            CallableStatement callableStatement = connection.prepareCall(SELECT_2);
             ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()){
                 user = new User();
@@ -49,11 +50,11 @@ public class UserRepository implements IUserRepository {
     public void save(User user) {
         Connection connection= BaseRepository.getConnectDB();
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement(SAVE);
-                preparedStatement.setString(1, user.getName());
-                preparedStatement.setString(2, user.getEmail());
-                preparedStatement.setString(3, user.getCountry());
-                preparedStatement.executeUpdate();
+                CallableStatement callableStatement = connection.prepareCall(DELETE_2);
+                callableStatement.setString(1, user.getName());
+                callableStatement.setString(2, user.getEmail());
+                callableStatement.setString(3, user.getCountry());
+                callableStatement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -113,7 +114,7 @@ public class UserRepository implements IUserRepository {
 //    }
         boolean rowUpdated = false;
         try (Connection connection= BaseRepository.getConnectDB();
-             CallableStatement callableStatement = connection.prepareCall(UPDATE_USERS_SQL2);) {
+             CallableStatement callableStatement = connection.prepareCall(UPDATE_USERS_SQL_2);) {
             callableStatement.setString(1, user.getName());
             callableStatement.setString(2, user.getEmail());
             callableStatement.setString(3, user.getCountry());
