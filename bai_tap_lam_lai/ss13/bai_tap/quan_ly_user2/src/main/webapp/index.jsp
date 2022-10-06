@@ -56,7 +56,7 @@
                   type="button"
                   class="btn btn-primary" data-bs-toggle="modal"
                   data-bs-target="#exampleModal">
-            <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-solid fa-trash-can" ></i>
           </button>
         </td>
       </tr>

@@ -15,3 +15,52 @@ insert into users(name, email, country) values('Kante','kante@che.uk','Kenia');
 
 select * from users ;
 
+-- Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng hiển thị danh sách users
+DELIMITER $$
+
+CREATE PROCEDURE userlist()
+
+BEGIN
+
+  select*
+  from users;
+
+    END$$
+
+DELIMITER ;
+call userlist()
+-- Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng sửa thông tin user
+DELIMITER $$
+
+CREATE PROCEDURE edit_list(id_sp int, name_sp varchar(45), email_sp varchar(50), country_sp varchar(50))
+
+BEGIN
+update users
+set name = name_sp, email = email_sp, country = country_sp
+where id = id_sp ;
+
+    END$$
+
+DELIMITER ;
+call edit_list();
+
+select * 
+from users;
+
+
+-- Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng xoá user
+
+DELIMITER $$
+
+CREATE PROCEDURE delete_list(id_sp int)
+
+BEGIN
+delete
+from users
+where id = id_sp;
+
+
+    END$$
+
+DELIMITER ;
+call delete_list();
