@@ -19,7 +19,7 @@
 
 </head>
 <body>
-<div class="container-fluid bg-gray-500 d-flex myCSS" style="height: 150px">
+<div class="container-fluid bg-gray-500 d-flex myCSS" style="height: 100px">
   <img class="h-100 p-4" src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" alt="">
   <img class="ms-5 ps-5" src="https://furamavietnam.com/wp-content/uploads/2019/02/Ariyana-Tourism-Complex-02-2.png"
        alt="">
@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<nav class="navbar navbar-expand-lg bg-light" style="height: 100px">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid mx-5">
     <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -77,16 +77,16 @@
 
       <form class="d-flex my-2" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit" style="width:  150px">
-          <i class="fa-solid fa-magnifying-glass">Search</i></button>
+        <button class="btn btn-outline-success" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
   </div>
 </nav>
 <br>
 <br>
-<div class="row" style="display: block; background-color:#3B99B3; text-align: center; height: 50px" >
-  <p ><a href="#" style="color: white; font-size: 25px;padding-top: 15px">TRẢI NGHIỆM ẨM THỰC & GIẢI TRÍ ></a></p>
+<div class="row" style="display: block; background-color:#3B99B3; text-align: center">
+  <p style="color: white">TRẢI NGHIỆM ẨM THỰC & GIẢI TRÍ ></p>
 </div>
 <div class="row">
   <div class="col-6">

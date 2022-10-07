@@ -1,20 +1,22 @@
 package model;
 
 public class Customer {
-    private int customerId;
-    private String customerName;
-    private String customerBirthday;
-    private int customerGender;
-    private String customerIdCard;
-    private String customerPhone;
-    private String customerEmail;
-    private String customerAddress;
-    private int customerTypeId;
+    int customerId;
+    String customerName;
+    String customerBirthday;
+    int customerGender;
+    String customerIdCard;
+    String customerPhone;
+    String customerEmail;
+    String customerAddress;
+    int customerTypeId;
 
-    public Customer() {
+    public Customer(String customerTypeId, String name, String dateOfBirth, int gender, String idCard, String phoneNumber, String email, String address) {
     }
 
-    public Customer(String customerName, String customerBirthday, int customerGender, String customerIdCard, String customerPhone, String customerEmail, String customerAddress, int customerTypeId) {
+    public Customer(int customerId, String customerName, String customerBirthday, int customerGender, String customerIdCard,
+                    String customerPhone, String customerEmail, String customerAddress, int customerTypeId) {
+        this.customerId = customerId;
         this.customerName = customerName;
         this.customerBirthday = customerBirthday;
         this.customerGender = customerGender;
@@ -25,8 +27,7 @@ public class Customer {
         this.customerTypeId = customerTypeId;
     }
 
-    public Customer(int customerId, String customerName, String customerBirthday, int customerGender, String customerIdCard, String customerPhone, String customerEmail, String customerAddress, int customerTypeId) {
-        this.customerId = customerId;
+    public Customer(String customerName, String customerBirthday, int customerGender, String customerIdCard, String customerPhone, String customerEmail, String customerAddress, int customerTypeId) {
         this.customerName = customerName;
         this.customerBirthday = customerBirthday;
         this.customerGender = customerGender;
