@@ -1,8 +1,8 @@
 package cotroller;
 
-import model.Facility;
-import model.FacilityType;
-import model.RentType;
+import model.facility.Facility;
+import model.facility.FacilityType;
+import model.facility.RentType;
 import service.facility.IFacilityService;
 import service.facility.impl.FacilityService;
 import service.facilityType.IFacilityTypeService;

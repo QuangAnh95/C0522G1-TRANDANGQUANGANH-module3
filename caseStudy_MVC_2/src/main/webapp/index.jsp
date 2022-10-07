@@ -14,12 +14,51 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <style>
+    #is {
+      background-color: #B5C8FF;
+      animation-name: keyframes1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes keyframes1 {
+      0% {
+        background-color: #B5C8FF;
+      }
+      14% {
+        background-color: slategrey;
+      }
+      28% {
+        background-color: bisque;
+      }
+      42% {
+        background-color: aquamarine;
+      }
+      56% {
+        background-color: lightblue;
+      }
+      70%{
+        background-color: cadetblue;
+      }
+      85%{
+        background-color: lightblue;
+      }
+      100%{
+        background-color: dodgerblue;
+      }
+    }
+
+
+
+
+
+
+
 
   </style>
 
 </head>
 <body>
-<div class="container-fluid bg-gray-500 d-flex myCSS" style="height: 100px">
+<div id="is" class="container-fluid bg-gray-500 d-flex myCSS" style="height: 150px">
   <img class="h-100 p-4" src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" alt="">
   <img class="ms-5 ps-5" src="https://furamavietnam.com/wp-content/uploads/2019/02/Ariyana-Tourism-Complex-02-2.png"
        alt="">
@@ -86,7 +125,11 @@
 <br>
 <br>
 <div class="row" style="display: block; background-color:#3B99B3; text-align: center">
-  <p style="color: white">TRẢI NGHIỆM ẨM THỰC & GIẢI TRÍ ></p>
+  <marquee direction="right"
+  behavior="alternate">
+    <p style="color: white; font-size: 35px; margin-top: 5px; font-weight: bold">TRẢI NGHIỆM ẨM THỰC & GIẢI TRÍ ></p>
+  </marquee>
+
 </div>
 <div class="row">
   <div class="col-6">

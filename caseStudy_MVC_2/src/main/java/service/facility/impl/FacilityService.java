@@ -1,6 +1,6 @@
 package service.facility.impl;
 
-import model.Facility;
+import model.facility.Facility;
 import repository.facility.IFacilityRepository;
 import repository.facility.impl.FacilityRepository;
 import service.facility.IFacilityService;

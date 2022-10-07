@@ -1,6 +1,6 @@
 package repository.rentType.impl;
 
-import model.RentType;
+import model.facility.RentType;
 import repository.BaseRepository;
 import repository.rentType.IRentTypeRepository;
 

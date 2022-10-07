@@ -1,6 +1,6 @@
 package repository.rentType;
 
-import model.RentType;
+import model.facility.RentType;
 
 import java.util.List;
 

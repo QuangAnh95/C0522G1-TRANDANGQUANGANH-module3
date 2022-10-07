@@ -1,6 +1,6 @@
 package repository.attachFacility.impl;
 
-import model.AttachFacility;
+import model.facility.AttachFacility;
 import repository.BaseRepository;
 import repository.attachFacility.IAttachFacilityRepository;
 

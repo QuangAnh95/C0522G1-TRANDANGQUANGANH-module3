@@ -26,11 +26,12 @@
         a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
-<body>
+<body style="background-image: url(https://recmiennam.com/wp-content/uploads/2018/07/hinh-nen-dep-66.jpg);width: 100%">
 
-<div class="p-3">
+<div  class="p-3">
     <h2 class="text-center fw-bold">CUSTOMER LIST</h2>
 
     <nav class="navbar navbar-expand-lg pb-0 mb-0">
@@ -76,7 +77,7 @@
             <th>Delete</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody style="font-weight: bolder">
         <c:forEach varStatus="status" var="customer" items="${customerList}">
             <tr>
                 <td class="text-center">${status.count}</td>

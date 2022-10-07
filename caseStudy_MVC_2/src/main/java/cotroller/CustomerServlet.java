@@ -1,7 +1,7 @@
 package cotroller;
 
-import model.Customer;
-import model.CustomerType;
+import model.customer.Customer;
+import model.customer.CustomerType;
 import service.customer.ICustomerService;
 import service.customer.impl.CustomerService;
 import service.customerType.ICustomerTypeService;

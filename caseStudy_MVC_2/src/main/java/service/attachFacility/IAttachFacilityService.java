@@ -1,6 +1,6 @@
 package service.attachFacility;
 
-import model.AttachFacility;
+import model.facility.AttachFacility;
 
 import java.util.List;
 

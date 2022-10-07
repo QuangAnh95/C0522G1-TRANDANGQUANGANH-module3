@@ -1,6 +1,6 @@
 package repository.customer.impl;
 
-import model.Customer;
+import model.customer.Customer;
 import repository.BaseRepository;
 import repository.customer.ICustomerRepository;
 
@@ -24,6 +24,7 @@ public class CustomerRepository implements ICustomerRepository {
     private static final String DELETE = "update customer set is_delete = 1 where customer_id = ? and is_delete = 0;";
     private static final String FIND_CUSTOMER_SQL = "select * from customer where customer_name like ? " +
             "and customer_address like ? and customer_phone like ? and is_delete = 0";
+
 
     @Override
     public List<Customer> finAll() {
