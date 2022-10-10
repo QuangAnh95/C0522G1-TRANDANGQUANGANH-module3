@@ -12,7 +12,7 @@ public interface IEmployeeRepository {
 
     boolean edit(Employee employee);
 
-    public Employee findById(int idFind);
+    Employee findById(int idFind);
 
     boolean delete (int employeeId);
 

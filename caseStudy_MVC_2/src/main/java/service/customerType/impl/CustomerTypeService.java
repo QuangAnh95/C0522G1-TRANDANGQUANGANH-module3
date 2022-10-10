@@ -8,7 +8,7 @@ import service.customerType.ICustomerTypeService;
 import java.util.List;
 
 public class CustomerTypeService implements ICustomerTypeService {
-    ICustomerTypeRepository customerTypeRepository = new CustomerTypeRepository();
+    private ICustomerTypeRepository customerTypeRepository = new CustomerTypeRepository();
 
     @Override
     public List<CustomerType> findAll() {

@@ -2,7 +2,7 @@ package model.employee;
 
 public class EducationDegree {
     private int educationDegreeId;
-    public String educationDegreeName;
+    private String educationDegreeName;
 
     public EducationDegree() {
     }

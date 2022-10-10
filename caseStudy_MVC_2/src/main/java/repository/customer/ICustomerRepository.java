@@ -11,7 +11,7 @@ public interface ICustomerRepository {
 
     boolean edit(Customer customer);
 
-    public Customer findById(int idFind);
+    Customer findById(int idFind);
 
     boolean delete (int customerId);
 

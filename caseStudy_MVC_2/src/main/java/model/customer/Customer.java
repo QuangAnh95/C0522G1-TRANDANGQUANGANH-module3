@@ -1,15 +1,15 @@
 package model.customer;
 
 public class Customer {
-    int customerId;
-    String customerName;
-    String customerBirthday;
-    int customerGender;
-    String customerIdCard;
-    String customerPhone;
-    String customerEmail;
-    String customerAddress;
-    int customerTypeId;
+    private int customerId;
+    private String customerName;
+    private String customerBirthday;
+    private int customerGender;
+    private String customerIdCard;
+    private String customerPhone;
+    private String customerEmail;
+    private String customerAddress;
+    private int customerTypeId;
 
     public Customer(String customerTypeId, String name, String dateOfBirth, int gender, String idCard, String phoneNumber, String email, String address) {
     }

@@ -1,17 +1,17 @@
 package model.employee;
 
 public class Employee {
-    int employeeId;
-    String employeeName;
-    String employeeBirthday;
-    String employeeIdCard;
-    double employeeSalary;
-    String employeePhone;
-    String employeeEmail;
-    String employeeAddress;
-    int positionId;
-    int educationDegreeId;
-    int divisionId;
+    private int employeeId;
+    private String employeeName;
+    private String employeeBirthday;
+    private String employeeIdCard;
+    private double employeeSalary;
+    private String employeePhone;
+    private String employeeEmail;
+    private String employeeAddress;
+    private int positionId;
+    private int educationDegreeId;
+    private int divisionId;
 
     public Employee() {
     }

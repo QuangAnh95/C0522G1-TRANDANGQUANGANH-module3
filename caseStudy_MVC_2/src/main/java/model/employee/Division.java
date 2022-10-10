@@ -1,8 +1,8 @@
 package model.employee;
 
 public class Division {
-    int divisionId;
-    String divisionName;
+    private int divisionId;
+    private String divisionName;
 
     public Division() {
     }
